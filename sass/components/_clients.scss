@@ -1,0 +1,48 @@
+.client-container {
+  @extend %container;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-list {
+  display: flex;
+  align-items: center;
+}
+
+.client-item {
+  display: flex;
+  color: $svg-color;
+}
+.client-link {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 170px;
+  height: 90px;
+
+  background-color: $white-color;
+
+  stroke: currentColor;
+  fill: currentColor;
+  text-decoration: none;
+}
+
+.client-list .client-item + .client-item {
+  margin-left: 30px;
+}
+.icon-box {
+  display: block;
+  border: 2px solid $svg-color;
+  width: 170px;
+  height: 90px;
+  padding: 20px 30px;
+  fill: $svg-color;
+  position: absolute;
+  align-content: center;
+  stroke-width: 0;
+
+  &:hover {
+    border-color: $accent-color;
+    fill: $accent-color;
+    cursor: pointer;
+  }
+}

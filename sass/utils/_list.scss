@@ -1,0 +1,6 @@
+.list {
+  @extend %list;
+}
+li {
+  display: list-item;
+}

@@ -1,0 +1,58 @@
+.section-title {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+.direction-container {
+  @extend %container;
+}
+.direction-cards {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 94px;
+}
+.card {
+  display: flex;
+  width: 370px;
+  height: 294px;
+  flex-shrink: 0;
+  text-align: center;
+  align-items: flex-end;
+}
+.card:nth-child(1) {
+  background-image: url(../images/nout.jpg);
+}
+.card:nth-child(2) {
+  background-image: url(../images/tel.jpg);
+}
+.card:nth-child(3) {
+  background-image: url(../images/comp.jpg);
+}
+.direction-cards .card + .card {
+  margin-left: 30px;
+}
+
+.directions-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 370px;
+  height: 70px;
+  flex-shrink: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $white-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}

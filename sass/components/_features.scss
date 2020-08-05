@@ -1,0 +1,60 @@
+.features-container {
+  @extend %container;
+}
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.features-card {
+  width: 270px;
+  margin-right: 30px;
+  padding-left: 0px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  background-position: center;
+  align-content: center;
+}
+.svg-card {
+  height: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.features-icon {
+  fill: $primary-text-color;
+
+  &:hover {
+    fill: $accent-color;
+  }
+}
+
+.features-card:nth-child(4n) {
+  margin-right: 0px;
+}
+.features-title {
+  text-align: start;
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features-text {
+  text-align: justify;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $small-text-color;
+}

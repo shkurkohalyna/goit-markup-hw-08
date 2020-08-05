@@ -1,0 +1,8 @@
+.page-header {
+  background-color: $white-color;
+  color: $primary-text-color;
+}
+.header-container {
+  @extend %container;
+  height: 80px;
+}

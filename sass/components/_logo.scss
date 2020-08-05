@@ -1,0 +1,14 @@
+.logo {
+  @extend %logo;
+  color: $primary-text-color;
+  margin-right: 85px;
+
+  &-web {
+    color: $accent-color;
+  }
+
+  &-footer {
+    @extend %logo;
+    color: $white-color;
+  }
+}

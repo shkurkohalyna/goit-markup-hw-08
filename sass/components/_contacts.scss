@@ -1,0 +1,51 @@
+.contacts-item {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-item + .contacts-item {
+  margin-left: 30px;
+}
+
+.contacts {
+  display: flex;
+  margin: auto;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.mail {
+  text-decoration: none;
+  color: $small-text-color;
+  margin-left: 10px;
+}
+.phone {
+  text-decoration: none;
+  color: $small-text-color;
+  margin-left: 10px;
+}
+.mail-icon {
+  fill: $small-text-color;
+  margin-right: 10px;
+  width: 16px;
+  height: 11.2px;
+}
+.phone-icon {
+  fill: $small-text-color;
+  margin-right: 10px;
+  width: 10px;
+  height: 14.94px;
+}
+.mail-icon:hover,
+.phone-icon:hover {
+  fill: $accent-color;
+  cursor: pointer;
+}
