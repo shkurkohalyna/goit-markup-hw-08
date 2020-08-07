@@ -17,11 +17,13 @@
           <a href="./index.html" class="logo"
             ><span class="logo-web">Web</span> Studio</a
           >
-          <button type="button">
-            <svg>
-              <use href=></use>
+          <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg width="40px"  height="40px" aria-label="переключатель мобильного меню">
+              <use class="mob-closeicon" href="./images/sprite.svg#icon-mobclose"></use>
+              <use class="mob-menuicon" href="./images/sprite.svg#icon-mobmenu"></use>
             </svg>
           </button>
+          <div class="menu-container" id="menu-container" data-menu>Menu</div>
           <ul class="list site-nav">
             <li class="site-nav_item">
               <a href="./index.html" class="site-nav_link--current">Студия</a>
@@ -455,5 +457,6 @@
       </section>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

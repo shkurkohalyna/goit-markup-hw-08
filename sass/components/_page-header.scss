@@ -4,5 +4,11 @@
 }
 .header-container {
   @extend %container;
-  height: 80px;
+  @media screen and (min-width: $mobile) {
+    height: 60px;
+    @extend %displayflex;
+  }
+  @media screen and (min-width: $tablet) {
+    height: 80px;
+  }
 }
