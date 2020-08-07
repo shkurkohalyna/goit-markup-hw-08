@@ -20,7 +20,8 @@
         "../sass/components/_direction.scss",
         "../sass/components/_teem.scss",
         "../sass/components/_clients.scss",
-        "../sass/components/_footer.scss"
+        "../sass/components/_footer.scss",
+        "../sass/utils/_breakpoints.scss"
     ],
     "names": [],
     "file": "main.css"
