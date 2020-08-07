@@ -1,7 +1,7 @@
 .logo {
   @extend %logo;
   color: $primary-text-color;
-  @media screen and(min-width:$desktop) {
+  @media screen and(min-width: 1200px) {
     margin-right: 85px;
   }
 

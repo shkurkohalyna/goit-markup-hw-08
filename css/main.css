@@ -312,19 +312,28 @@ h4 {
 }
 
 .filtr, .our-works, .filtr-container, .header-container, .features-container, .direction-container, .teem-container, .client-container, .footer-container, .develop-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .filtr, .our-works, .filtr-container, .header-container, .features-container, .direction-container, .teem-container, .client-container, .footer-container, .develop-container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filtr, .our-works, .filtr-container, .header-container, .features-container, .direction-container, .teem-container, .client-container, .footer-container, .develop-container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filtr, .our-works, .filtr-container, .header-container, .features-container, .direction-container, .teem-container, .client-container, .footer-container, .develop-container {
+    width: 1200px;
+  }
 }
 
 .list, .our-works, .filtr-container {
@@ -348,9 +357,21 @@ h4 {
 .logo, .logo-footer {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
   text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+  .logo, .logo-footer {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo, .logo-footer {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 }
 
 li {
@@ -522,15 +543,38 @@ li {
 .page-header {
   background-color: #ffffff;
   color: #212121;
+  position: relative;
 }
 
-.header-container {
-  height: 80px;
+@media screen and (min-width: 480px) {
+  .header-container {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    height: 80px;
+  }
 }
 
 .logo {
   color: #212121;
-  margin-right: 85px;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 85px;
+  }
 }
 
 .logo-web {
@@ -550,10 +594,57 @@ li {
           align-items: center;
 }
 
-.site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.menu-button .mob-closeicon {
+  display: none;
+}
+
+.menu-button.is-open .mob-closeicon {
+  display: block;
+}
+
+.menu-button.is-open .mob-menuicon {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.menu-container.is-open {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .site-nav_item {
@@ -564,8 +655,10 @@ li {
   color: #2196f3;
 }
 
-.site-nav_item + .site-nav_item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .site-nav_item + .site-nav_item {
+    margin-left: 50px;
+  }
 }
 
 .site-nav_link--current {
@@ -646,14 +739,10 @@ li {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
   text-align: center;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/Header.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/Header.jpg);
   background-color: #757575;
-  max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
@@ -661,15 +750,51 @@ li {
   background-position: center;
 }
 
+@media screen and (min-width: 480px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 60px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 204px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+  }
+}
+
 .hero-title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #ffffff;
+}
+
+@media screen and (min-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .button-primary:hover, .button-primary:focus {
@@ -939,17 +1064,26 @@ textarea {
   padding: 10px 55px;
 }
 
-.features {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .features-card {

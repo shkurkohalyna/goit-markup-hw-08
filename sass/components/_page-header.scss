@@ -1,14 +1,17 @@
 .page-header {
   background-color: $white-color;
   color: $primary-text-color;
+  position: relative;
 }
 .header-container {
   @extend %container;
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: 480px) {
     height: 60px;
-    @extend %displayflex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: 768px) {
     height: 80px;
   }
 }

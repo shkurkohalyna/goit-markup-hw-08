@@ -1,6 +1,19 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @media screen and (min-width: 480px) {
+    padding-top: 118px;
+    padding-bottom: 60px;
+    height: 400px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 118px;
+    padding-bottom: 204px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+  }
 
   text-align: center;
   background-image: linear-gradient(
@@ -9,8 +22,7 @@
     ),
     url(../images/Header.jpg);
   background-color: $small-text-color;
-  max-width: 1600px;
-  height: 600px;
+
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
@@ -18,10 +30,17 @@
   background-position: center;
 }
 .hero-title {
+  @media screen and (min-width: 480px) {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06em;
