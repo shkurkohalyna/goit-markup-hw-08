@@ -320,19 +320,19 @@ h4 {
 
 @media screen and (min-width: 480px) {
   .filtr, .our-works, .filtr-container, .header-container, .features-container, .direction-container, .teem-container, .client-container, .footer-container, .develop-container {
-    width: 480px;
+    min-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .filtr, .our-works, .filtr-container, .header-container, .features-container, .direction-container, .teem-container, .client-container, .footer-container, .develop-container {
-    width: 768px;
+    min-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .filtr, .our-works, .filtr-container, .header-container, .features-container, .direction-container, .teem-container, .client-container, .footer-container, .develop-container {
-    width: 1200px;
+    min-width: 1200px;
   }
 }
 
@@ -544,6 +544,15 @@ li {
   background-color: #ffffff;
   color: #212121;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 480px) {
@@ -677,29 +686,47 @@ li {
   border-radius: 2px;
 }
 
-.contacts-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contacts-item + .contacts-item {
-  margin-left: 30px;
-}
-
 .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
+  display: block;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+  }
+  .contacts .mail,
+  .contacts .phone {
+    margin-left: 10px;
+  }
+  .contacts .mail-icon,
+  .contacts .phone-icon {
+    margin-right: 10px;
+  }
+  .contacts .contacts-item + .contacts-item {
+    margin-left: 30px;
+  }
+  .contacts .contacts-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .contacts:hover {
@@ -709,25 +736,21 @@ li {
 .mail {
   text-decoration: none;
   color: #757575;
-  margin-left: 10px;
 }
 
 .phone {
   text-decoration: none;
   color: #757575;
-  margin-left: 10px;
 }
 
 .mail-icon {
   fill: #757575;
-  margin-right: 10px;
   width: 16px;
   height: 11.2px;
 }
 
 .phone-icon {
   fill: #757575;
-  margin-right: 10px;
   width: 10px;
   height: 14.94px;
 }
@@ -748,18 +771,15 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-@media screen and (min-width: 480px) {
-  .hero {
-    padding-top: 118px;
-    padding-bottom: 60px;
-    height: 400px;
-  }
+  height: 400px;
+  max-width: 480px;
+  padding-top: 118px;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
+    height: 400px;
     padding-top: 118px;
     padding-bottom: 204px;
   }
@@ -775,19 +795,14 @@ li {
 }
 
 .hero-title {
-  margin-bottom: 30px;
   font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #ffffff;
-}
-
-@media screen and (min-width: 480px) {
-  .hero-title {
-    font-size: 26px;
-    line-height: 1.62;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1064,6 +1079,11 @@ textarea {
   padding: 10px 55px;
 }
 
+.features-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 @media screen and (min-width: 768px) {
   .features {
     display: -webkit-box;
@@ -1071,32 +1091,31 @@ textarea {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .features {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    margin-right: -15px;
+    margin-left: -15px;
   }
 }
 
 .features-card {
-  width: 270px;
-  margin-right: 30px;
-  padding-left: 0px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
   text-align: center;
   background-position: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .features-card {
+    width: 50%;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-card {
+    width: 25%;
+  }
 }
 
 .svg-card {
@@ -1122,10 +1141,6 @@ textarea {
   fill: #2196f3;
 }
 
-.features-card:nth-child(4n) {
-  margin-right: 0px;
-}
-
 .features-title {
   text-align: start;
   margin-top: 30px;
@@ -1142,6 +1157,16 @@ textarea {
   font-size: 16px;
   line-height: 1.2;
   color: #757575;
+}
+
+.direction-section {
+  display: block;
+}
+
+@media screen and (max-width: 1199px) {
+  .direction-section {
+    display: none;
+  }
 }
 
 .section-title {

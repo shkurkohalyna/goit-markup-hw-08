@@ -2,6 +2,9 @@
   background-color: $white-color;
   color: $primary-text-color;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header-container {
   @extend %container;

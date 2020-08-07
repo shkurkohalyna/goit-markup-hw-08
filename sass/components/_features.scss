@@ -2,27 +2,27 @@
   @extend %container;
   padding-top: 30px;
   padding-bottom: 30px;
-  
 }
 .features {
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
-  margin-left: -15px;
-  }
+    margin-left: -15px;
   }
 }
 .features-card {
   text-align: center;
   background-position: center;
   align-content: center;
-    @media screen and (min-width: 768px) {
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
     width: 50%;
     margin-right: 15px;
     margin-left: 15px;
-    @media screen and (min-width: 1200px) {
-    width: 25%; 
+  }
+  @media screen and (min-width: 1200px) {
+    width: 25%;
   }
 }
 .svg-card {

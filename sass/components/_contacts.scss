@@ -1,21 +1,32 @@
-.contacts-item {
-  display: flex;
-  align-items: center;
-}
-
-.contacts-item + .contacts-item {
-  margin-left: 30px;
-}
-
 .contacts {
-  display: flex;
-  margin: auto;
-
+  display: block;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin: auto;
+    .mail,
+    .phone {
+      margin-left: 10px;
+    }
+    .mail-icon,
+    .phone-icon {
+      margin-right: 10px;
+    }
+    .contacts-item + .contacts-item {
+      margin-left: 30px;
+    }
+    .contacts-item {
+      display: flex;
+      align-items: center;
+    }
+  }
 
   &:hover {
     color: $accent-color;
@@ -25,22 +36,18 @@
 .mail {
   text-decoration: none;
   color: $small-text-color;
-  margin-left: 10px;
 }
 .phone {
   text-decoration: none;
   color: $small-text-color;
-  margin-left: 10px;
 }
 .mail-icon {
   fill: $small-text-color;
-  margin-right: 10px;
   width: 16px;
   height: 11.2px;
 }
 .phone-icon {
   fill: $small-text-color;
-  margin-right: 10px;
   width: 10px;
   height: 14.94px;
 }
