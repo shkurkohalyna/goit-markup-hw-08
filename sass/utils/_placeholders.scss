@@ -42,14 +42,14 @@
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  @media screen and(min-width:480px) {
-    min-width: 480px;
+  @media screen and (min-width: $mobile-up) {
+    width: 480px;
   }
-  @media screen and(min-width:768px) {
-    min-width: 768px;
+  @media screen and (min-width: $tablet-up) {
+    width: 768px;
   }
-  @media screen and(min-width: 1200px) {
-    min-width: 1200px;
+  @media screen and (min-width: $desktop-up) {
+    width: 1200px;
   }
 }
 

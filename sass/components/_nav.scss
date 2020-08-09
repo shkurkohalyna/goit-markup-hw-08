@@ -34,9 +34,8 @@
   }
 }
 .site-nav {
-  @media screen and(max-width: 767px) {
-    display: none;
-  }
+  display: block;
+
   @media screen and(min-width: 768px) {
     display: flex;
   }
@@ -68,7 +67,7 @@
     bottom: 0;
 
     display: block;
-    width: 100%;
+    width: 50%;
     height: 5px;
     background-color: $accent-color;
     border-radius: 2px;

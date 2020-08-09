@@ -6,7 +6,6 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   @media screen and (max-width: 767px) {
-    display: none;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -33,14 +32,12 @@
   }
 }
 
-.mail {
-  text-decoration: none;
-  color: $small-text-color;
-}
+.mail,
 .phone {
   text-decoration: none;
   color: $small-text-color;
 }
+
 .mail-icon {
   fill: $small-text-color;
   width: 16px;
